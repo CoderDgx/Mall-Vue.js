@@ -1,10 +1,14 @@
-# Vue.js蘑菇街项目开发
+---
+typora-root-url: ./Devimg
+---
+
+# Vue.js仿蘑菇街项目开发
 
 ## 一. 项目配置
 
 ### 1.1 目录结构
 
-![image-20200217140638303](/Users/tstark/Library/Application Support/typora-user-images/image-20200217140638303.png)
+<img src="/image-20200217140638303.png" alt="image-20200217140638303" style="zoom:50%;" />
 
 - network->网络请求模块
 - components -> common/content
@@ -25,9 +29,9 @@
 
 ### 1.4 tabbar封装
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200217150554267.png" alt="image-20200217150554267" style="zoom:33%;" />
+<img src="/image-20200217150554267.png" alt="image-20200217150554267" style="zoom:33%;" />
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200217150638507.png" alt="image-20200217150638507" style="zoom:33%;" />
+<img src="/image-20200217150638507.png" alt="image-20200217150638507" style="zoom:33%;" />
 
 - 封装TabBar->TabBar外部的框，中间预留插槽，可插入多个选项钮
 - 封装TabBarItem->TabBar内部的图标和内容：包括激活时的图标，未激活时的图标，图标说明
@@ -139,7 +143,7 @@
 - 设置navbar相关的样式
 - 使用navbar实现首页的导航栏
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200218122908416.png" alt="image-20200218122908416" style="zoom:33%;" />
+<img src="/image-20200218122855243.png" alt="image-20200218122855243" style="zoom:33%;" />
 
 ### 2.2 请求首页的数据
 
@@ -186,36 +190,31 @@
    <home-swiper :banners="banners" ref="hSwiper"></home-swiper>
   ```
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200218131222566.png" alt="image-20200218131222566" style="zoom:33%;" />
+<img src="/image-20200218131213487.png" alt="image-20200218131213487" style="zoom:33%;" />
+
+<img src="/image-20200218131309691.png" alt="image-20200218131309691" style="zoom:33%;" />
 
 ### 2.4 FeatureView的封装和使用
 
 - 封装childComps->FeatureView
 
   ```js
-  <div class="feature">
-      <div class="feature-item" v-for="(item, index) in features">
-        <a :href="item.link">
-          <img :src="item.image" alt="">
-          <div>{{item.title}}</div>
-        </a>
-      </div>
-    </div>
+  xxxxxxxxxx ![image-20200218132139379](/image-20200218132139379.png)<div class="feature">    <div class="feature-item" v-for="(item, index) in features">      <a :href="item.link">        <img :src="item.image" alt="">        <div>{{item.title}}</div>      </a>    </div>  </div>js
   ```
-
+  
 - 传入recommends数据，进行展示
 
   ```js
   <feature-view :features="recommends"></feature-view>
   ```
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200218132139379.png" alt="image-20200218132139379" style="zoom:33%;" />
+<img src="/image-20200218132139379.png" alt="image-20200218132139379" style="zoom:33%;" />
 
 ### 2.5 RecommendView的封装
 
 ​	展示图片即可。
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200218132530847.png" alt="image-20200218132530847" style="zoom:33%;" />
+<img src="/image-20200218132530847.png" alt="image-20200218132530847" style="zoom:33%;" />
 
 ### 2.6 TabControl的封装和使用
 
@@ -270,7 +269,7 @@
                        ref="tabControl"></tab-control>
   ```
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200218133919322.png" alt="image-20200218133919322" style="zoom:33%;" />
+<img src="/image-20200218133919322.png" alt="image-20200218133919322" style="zoom:33%;" />
 
 ### 2.7 网格布局GirdView的封装
 
@@ -340,7 +339,7 @@
     },
     ```
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200218142603894.png" alt="image-20200218142603894" style="zoom:33%;" />
+<img src="/image-20200218142603894.png" alt="image-20200218142603894" style="zoom:33%;" />
 
 ### 2.9 滚动组件Scroll的封装
 
@@ -467,7 +466,7 @@
   },
   ```
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200218151111777.png" alt="image-20200218151111777" style="zoom:33%;" />
+<img src="/image-20200218151111777.png" alt="image-20200218151111777" style="zoom:33%;" />
 
 ### 2.12 tabControl的停留
 
@@ -489,7 +488,7 @@
   this.isTabFixed = position.y < -this.tabOffsetTop
   ```
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200218152152872.png" alt="image-20200218152152872" style="zoom:33%;" />
+<img src="/image-20200218152152872.png" alt="image-20200218152152872" style="zoom:33%;" />
 
 ### 2.13 关于滚动的问题(事件总线，防抖函数)
 
@@ -604,7 +603,7 @@ mounted() {
 - 在navbar的基础上封装detail->childComps->DetailNavBar
 - 插槽左边放返回图标，中部放文字信息
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200219134043475.png" alt="image-20200219134043475" style="zoom:33%;" />
+<img src="/image-20200219134043475.png" alt="image-20200219134043475" style="zoom:33%;" />
 
 ### 3.3 请求详情页数据(与首页类似)
 
@@ -617,7 +616,7 @@ mounted() {
 - 在swiper的基础上封装childComps->DetailSwiper
 - 传入数据进行展示
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200219142542779.png" alt="image-20200219142542779" style="zoom:33%;" />
+<img src="/image-20200219142542779.png" alt="image-20200219142542779" style="zoom:33%;" />
 
 ### 3.5 商品基本信息展示GoodsBaseInfo
 
@@ -625,7 +624,7 @@ mounted() {
 - 根据传入的goods对象展示名字、价格、销量、服务等信息
 - 注意CSS的设计
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200219143400432.png" alt="image-20200219143400432" style="zoom:33%;" />
+![image-20200219143400432](/image-20200219143400432.png)
 
 ### 3.6 加入滚动效果Scroll
 
@@ -636,23 +635,23 @@ mounted() {
 
 - 店铺信息DetailShopInfo
 
-  <img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200219150048689.png" alt="image-20200219150048689" style="zoom:33%;" />
+  <img src="/image-20200219150048689.png" alt="image-20200219150048689" style="zoom:33%;" />
 
 - 商品图片信息DetailGoodsInfo
 
-  <img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200219150321009.png" alt="image-20200219150321009" style="zoom:33%;" />
+  <img src="/image-20200219150321009.png" alt="image-20200219150321009" style="zoom:33%;" />
 
 - 商品参数信息DetailParamInfo
 
-  <img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200219150457082.png" alt="image-20200219150457082" style="zoom:33%;" />
+  <img src="/image-20200219150457082.png" alt="image-20200219150457082" style="zoom:33%;" />
 
 - 商品评论信息DetailCommentInfo
 
-  <img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200219151815428.png" alt="image-20200219151815428" style="zoom:33%;" />
+  <img src="/image-20200219151815428.png" alt="image-20200219151815428" style="zoom:33%;" />
 
 - 热门推荐信息DetailRecommendInfo
 
-  <img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200219152258279.png" alt="image-20200219152258279" style="zoom:33%;" />
+  ![image-20200219152258279](/image-20200219152258279.png)
 
 ### 3.8 点击标题滚到固定内容
 
@@ -687,7 +686,7 @@ mounted() {
         },
   ```
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200220121210902.png" alt="image-20200220121210902" style="zoom:33%;" />
+<img src="/image-20200220121210902.png" alt="image-20200220121210902" style="zoom:33%;" />
 
 ### 3.9 滚动内容显示对应标题
 
@@ -716,14 +715,14 @@ mounted() {
           },
     ```
 
-  <img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200220125459200.png" alt="image-20200220125459200" style="zoom:33%;" />
+  <img src="/image-20200220125459200.png" alt="image-20200220125459200" style="zoom:33%;" />
 
 ### 3.10 底部工具栏DetailBottomBar的封装
 
 - 为工具栏添加图标和内容
 - 注意CSS设计
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200220152748094.png" alt="image-20200220152748094" style="zoom:33%;" />
+<img src="/image-20200220152748094.png" alt="image-20200220152748094" style="zoom:33%;" />
 
 ### 3.11 回到顶部按钮BackTop的混入封装
 
@@ -857,9 +856,7 @@ mounted() {
         }
     ```
 
-    
-
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200220164503230.png" alt="image-20200220164503230" style="zoom:33%;" />
+  <img src="/image-20200220164503230.png" alt="image-20200220164503230" style="zoom:33%;" />
 
 ### 4.4 购物车商品列表展示CartList和CartListItem
 
@@ -934,7 +931,7 @@ mounted() {
         }
     ```
 
-  <img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200221180710026.png" alt="image-20200221180710026" style="zoom:33%;" />
+  <img src="/image-20200221180710026.png" alt="image-20200221180710026" style="zoom: 33%;" />
 
 ### 4.5 购物车底部工具栏封装
 
@@ -989,7 +986,7 @@ mounted() {
     $store.getters.cartCount
     ```
 
-  <img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200222170023679.png" alt="image-20200222170023679" style="zoom:33%;" />
+  <img src="/image-20200222170023679.png" alt="image-20200222170023679" style="zoom:33%;" />
 
 ## 五. 分类页开发
 
@@ -997,7 +994,7 @@ mounted() {
 
 - 引入NvaBar组件进行使用(与购物车类似)
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200225145812748.png" alt="image-20200225145812748" style="zoom:33%;" />
+![image-20200225145812748](/image-20200225145812748.png)
 
 ### 5.2 分类页面数据请求
 
@@ -1089,7 +1086,7 @@ selectItem(index) {
       }
 ```
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200225155056681.png" alt="image-20200225155056681" style="zoom:33%;" />
+<img src="/image-20200225155056681.png" alt="image-20200225155056681" style="zoom:33%;" />
 
 ### 5.4 分类数据展示—TabContentCategory的封装和使用
 
@@ -1097,7 +1094,7 @@ selectItem(index) {
 - 网格布局
 - 添加滚动效果
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200225161604439.png" alt="image-20200225161604439" style="zoom:33%;" />
+<img src="/image-20200225161604439.png" alt="image-20200225161604439" style="zoom:33%;" />
 
 ### 5.5 分类数据展示—TabControl和TabContentDetail的封装和使用
 
@@ -1145,13 +1142,13 @@ selectItem(index) {
                          @itemClick="tabClick"/>
   ```
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200225162758265.png" alt="image-20200225162758265" style="zoom:33%;" />
+<img src="/image-20200225162758265.png" alt="image-20200225162758265" style="zoom:33%;" />
 
 - 传入CategoryDetail的数据
 - 与首页类似，引入GoodListItem封装TabContentDetail
 - 网格布局，展示数据
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200225163301889.png" alt="image-20200225163301889" style="zoom:33%;" />
+<img src="/image-20200225163301889.png" alt="image-20200225163301889" style="zoom:33%;" />
 
 ## 六. 个人页面开发
 
@@ -1159,7 +1156,7 @@ selectItem(index) {
 
 - 引入NavBar(与前面类似)
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200225164007339.png" alt="image-20200225164007339" style="zoom:33%;" />
+<img src="/image-20200225164007339.png" alt="image-20200225164007339" style="zoom:33%;" />
 
 ### 6.2 用户信息UseInfo封装
 
@@ -1169,16 +1166,14 @@ selectItem(index) {
 
 - 将用户信息进行排布，预留相应的插槽(如头像，名字，手机号等)
 
-  
-
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200225165922764.png" alt="image-20200225165922764" style="zoom:33%;" />
+<img src="/image-20200225165922764.png" alt="image-20200225165922764" style="zoom:33%;" />
 
 ### 6.3 用户的优惠、余额和积分显示
 
 - 需要传过多的参数，目前还无数据，为封装
 - 注意CSS样式
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200225170325563.png" alt="image-20200225170325563" style="zoom:33%;" />
+<img src="/image-20200225170325563.png" alt="image-20200225170325563" style="zoom:33%;" />
 
 ### 6.4 功能列表ListView的封装和使用
 
@@ -1191,5 +1186,4 @@ selectItem(index) {
 <list-view :list-data="serviceList" class="service-list"></list-view> 
 ```
 
-<img src="/Users/tstark/Library/Application Support/typora-user-images/image-20200225170651934.png" alt="image-20200225170651934" style="zoom:33%;" />
-
+<img src="/image-20200225170651934.png" alt="image-20200225170651934" style="zoom:33%;" />
