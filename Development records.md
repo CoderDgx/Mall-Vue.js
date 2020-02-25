@@ -199,7 +199,7 @@ typora-root-url: ./Devimg
 - 封装childComps->FeatureView
 
   ```js
-  xxxxxxxxxx ![image-20200218132139379](/image-20200218132139379.png)<div class="feature">    <div class="feature-item" v-for="(item, index) in features">      <a :href="item.link">        <img :src="item.image" alt="">        <div>{{item.title}}</div>      </a>    </div>  </div>js
+  <div class="feature">    <div class="feature-item" v-for="(item, index) in features">      <a :href="item.link">        <img :src="item.image" alt="">        <div>{{item.title}}</div>      </a>    </div>  </div>js
   ```
   
 - 传入recommends数据，进行展示
